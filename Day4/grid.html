@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "header"
+                "main"
+                "footer";
+            min-height: 100vh;
+        }
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            grid-area: main;
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f4f4f4;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .image-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .info-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Web Page</h1>
+            <p>Designed with CSS Grid Layout</p>
+        </header>
+        <main>
+           
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="2.jpg" alt="Placeholder Image 1">
+                </div>
+                <div class="image-card">
+                    <img src="3.jpg" alt="Placeholder Image 2">
+                </div>
+                <div class="image-card">
+                    <img src="4.jpg" alt="Placeholder Image 3">
+                </div>
+                <div class="image-card">
+                    <img src="5.jpg" alt="Placeholder Image 4">
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maiores totam, in adipisci ea reiciendis possimus quis aliquid nemo nam sunt culpa velit delectus quia rem magnam perspiciatis, voluptatum facilis?</p>
+                </div>
+                <div class="info-card">
+                    <h2>Services</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptas sequi repellendus est vero totam adipisci minus, sint nihil temporibus consectetur voluptatibus saepe sed mollitia rerum perspiciatis praesentium! Optio, architecto?</p>
+                </div>
+                <div class="info-card">
+                    <h2>Contact</h2>
+                    <p>vikas.ss2023ece@sece.ac.in</p>
+                </div>
+            </div>
+        </main>
+       
+    </div>
+</body>
+</html>
