@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        .album, .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center; 
+        }
+
+        .album-item, .gallery-item {
+            width: 200px; 
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .album-item:hover, .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .album-item a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100%;          
+    font-weight: bold;
+}
+
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        section {
+            display: none;
+        }
+
+        section:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photo Gallery</h1>
+    </header>
+    <main>
+       
+        <section id="albums" style="display: block;">
+            <div class="album">
+                <div class="album-item">
+                    <a href="#Camera">Camera</a>
+                </div>
+                <div class="album-item">
+                    <a href="#Downloads">Downloads</a>
+                </div>
+                <div class="album-item">
+                    <a href="#WhatsAppImages">WhatsApp Images</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="Camera">
+            <div class="back-link">
+                <a href="#albums">&larr; Back to Albums</a>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="2.jpg" alt="Camera Photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpg" alt="Camera Photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.jpg" alt="Camera Photo 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="Downloads">
+            <div class="back-link">
+                <a href="#albums">&larr; Back to Albums</a>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="5.jpg" alt="Downloads Photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="6.jpg" alt="Downloads Photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="7.jpg" alt="Downloads Photo 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="WhatsAppImages">
+            <div class="back-link">
+                <a href="#albums">&larr; Back to Albums</a>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="8.jpg" alt="WhatsApp Images Photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="9.jpg" alt="WhatsApp Images Photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="10.jpg" alt="WhatsApp Images Photo 3">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
