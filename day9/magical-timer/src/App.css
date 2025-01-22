@@ -1,0 +1,29 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-section,
+.timer-section {
+  margin-bottom: 20px;
+}
+
+.text-box {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.time-up {
+  color: red;
+  font-weight: bold;
+}
