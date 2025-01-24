@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+}
+
+.header__logo {
+  position: fixed;
+  left: 20px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
